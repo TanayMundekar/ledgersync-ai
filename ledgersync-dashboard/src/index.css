@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------
+   CUSTOM SCROLLBAR STYLING
+------------------------------------- */
+
+/* 1. Global Scrollbar (The main browser scrollbar) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19; /* Matches your master dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B; /* Slate 800 - A subtle dark gray */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; /* Slate 700 - Slightly lighter on hover */
+}
+
+/* 2. Scoped Custom Scrollbar (For your feed container) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Super slim for the inner panel */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track invisible inside the card */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #334155; 
+  border-radius: 10px;
+}
